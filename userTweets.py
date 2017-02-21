@@ -29,7 +29,7 @@ class UserTweets():
             tweets.extend([tweet._json for tweet in newTweets])
             newTweets = self.api.user_timeline(screen_name=self.screenName, count=200, max_id=lastTweet)
         if verbose:
-            print '[UserTweets] Added {:d} tweets from {:s}.'.format(len(tweets), self.screenName)
+            print '[UserTweets] Fetched {:d} tweets from {:s}.'.format(len(tweets), self.screenName)
 
         return tweets
 

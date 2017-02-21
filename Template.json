@@ -1,0 +1,62 @@
+{
+    "truncated": false,
+    "text": "RT @PSheppardTV: In Trump\u2019s Volleys, Echoes of Alex Jones\u2019s Conspiracy Theories https://t.co/2nZiweYAj4",
+    "is_quote_status": false,
+    "id": 833788972102983681,
+    "favorite_count": 0,
+    "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+    "retweeted": false,
+    "coordinates": null,
+    "timestamp_ms": "1487625756656",
+    "entities": {
+        "user_mentions": [
+            {
+                "id": 22729901,
+                "indices": [
+                    3,
+                    15
+                ],
+                "id_str": "22729901",
+                "screen_name": "PSheppardTV",
+                "name": "Phillip Sheppard"
+            }
+        ],
+        "symbols": [],
+        "hashtags": [],
+        "urls": [
+            {
+                "url": "https://t.co/2nZiweYAj4",
+                "indices": [
+                    80,
+                    103
+                ],
+                "expanded_url": "https://nyti.ms/2lxk3bt",
+                "display_url": "nyti.ms/2lxk3bt"
+            }
+        ]
+    },
+    "in_reply_to_screen_name": null,
+    "id_str": "833788972102983681",
+    "retweet_count": 0,
+    "in_reply_to_user_id": null,
+    "favorited": false,
+    "user": {
+        "id": 2437039252,
+        "verified": false,
+        "followers_count": 49,
+        "id_str": "2437039252",
+        "listed_count": 20,
+        "utc_offset": -28800,
+        "statuses_count": 656,
+        "friends_count": 1449,
+        "location": "CT",
+        "name": "Jori Ingram Goya",
+        "lang": "en",
+        "favourites_count": 574,
+        "screen_name": "JorlGoya"
+    },
+    "geo": null,
+    "lang": "en",
+    "created_at": "Mon Feb 20 21:22:36 +0000 2017",
+    "place": null
+}
