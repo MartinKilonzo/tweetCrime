@@ -1,4 +1,5 @@
 import os
+import time
 import json
 from datetime import datetime
 
@@ -120,7 +121,6 @@ class TweetListener(StreamListener):
 
 
 if __name__ == '__main__':
-
     VANCOUVER_BOUNDS = [-123.224215, 49.19854, -123.022947, 49.316738]
     with open('./Template.json', 'r') as fs:
         tweetKeys = json.load(fs).keys()
@@ -129,16 +129,23 @@ if __name__ == '__main__':
     userPath = './tweets/users.json'
     if not os.path.isfile(userPath):
         open(userPath, 'a').close()
-    ul = []
-    with open(userPath, 'r') as fs:
-        for line in fs:
-            ul.append(json.loads(line))
 
-    print 'User List: {:s}'.format(str(ul))
+    while True:
+        try:
+            ul = []
+            with open(userPath, 'r') as fs:
+                for line in fs:
+                    ul.append(json.loads(line))
 
-    auth = OAuthHandler(consumer_key, consumer_secret)
-    auth.set_access_token(access_token, access_token_secret)
-    with open('./tweets/vanTweets.json', 'a') as fs:
-        listener = TweetListener(fs, tweetKeys, VANCOUVER_BOUNDS, ul)
-        stream = Stream(auth, listener)
-        stream.filter(locations=VANCOUVER_BOUNDS)
+            print 'Users: {:d}'.format(len(ul))
+
+            auth = OAuthHandler(consumer_key, consumer_secret)
+            auth.set_access_token(access_token, access_token_secret)
+            with open('./tweets/vanTweets.json', 'a') as fs:
+                listener = TweetListener(fs, tweetKeys, VANCOUVER_BOUNDS, ul)
+                stream = Stream(auth, listener)
+                stream.filter(locations=VANCOUVER_BOUNDS)
+        except Exception as e:
+            log(e)
+
+        time.sleep(10)
