@@ -1,6 +1,7 @@
 *.zip
 *.csv
 *.xlsx
+database/
 tweets/
 *.pyc
 streamlog.txt
