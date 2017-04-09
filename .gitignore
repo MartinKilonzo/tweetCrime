@@ -1,4 +1,6 @@
-crimeData/
+*.zip
+*.csv
+*.xlsx
 tweets/
 *.pyc
 streamlog.txt
